@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<p class="subtitle">Organize seu dia com tarefas, hábitos e lembretes — tudo salvo no seu navegador (funciona offline).</p>
+</header>
+
+
+<main class="container">
+<!-- Coluna principal: Tarefas -->
+<section class="card" aria-labelledby="tarefas-title">
+<h2 id="tarefas-title">Tarefas</h2>
+<div id="taskAlert" class="alert">⏰ Você tem tarefas próximas! Dê uma olhada abaixo.</div>
+<form id="taskForm" class="grid two" autocomplete="off">
+<input id="taskTitle" type="text" placeholder="Título da tarefa" required />
+<input id="taskWhen" type="datetime-local" required />
+<input id="taskNotes" type="text" placeholder="Notas (opcional)" />
+<button type="submit">Adicionar tarefa</button>
+</form>
+<ul id="taskList" class="tasks" aria-live="polite"></ul>
+</section>
+
+
+<!-- Coluna lateral: Hábitos & Rotina -->
+<section class="card" aria-labelledby="habitos-title">
+<h2 id="habitos-title">Hábitos & Rotina</h2>
+<div class="grid two">
+<div>
+<label for="wake">Hora de acordar</label>
+<input id="wake" type="time" />
+</div>
+<div>
+<label for="sleep">Hora de dormir</label>
+<input id="sleep" type="time" />
+</div>
+</div>
+
+
+<div class="grid two" style="margin-top:10px">
+<div>
+<label for="waterEvery">Hidratar a cada (min)</label>
+<input id="waterEvery" type="number" min="15" step="5" placeholder="60" />
+</div>
+<div>
+<label for="exerciseEvery">Exercício a cada (h)</label>
+<input id="exerciseEvery" type="number" min="4" step="1" placeholder="8" />
+</div>
+</div>
+
+
+<div style="margin-top:10px">
+<label for="meals">Horários de refeição (HH:MM, separados por vírgula)</label>
+<input id="meals" type="text" placeholder="07:30, 12:00, 19:30" />
+</div>
+
+
+<div class="row" style="margin-top:10px">
+<button id="saveSettings" type="button">Salvar preferências</button>
+<button id="resetAll" class="ghost" type="button" title="Apaga todas as informações salvas">Limpar tudo</button>
+</div>
+
+
+<div class="pillbar" style="margin-top:12px" id="statusBar"></div>
+</section>
+</main>
+
+
+<footer>
+<div>
+<strong>Dica:</strong> ative o GitHub Pages (branch <em>main</em>, pasta <em>/</em>) para publicar. Funciona offline via cache do navegador e LocalStorage.
+</div>
+</footer>
+
+
+<script src="app.js"></script>
+</body>
+</html>
